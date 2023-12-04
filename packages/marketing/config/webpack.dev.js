@@ -9,7 +9,7 @@ const devConfig = {
     devServer: {
         port: 8081,
         historyApiFallback: {
-            index: 'index.html'
+            index: "/index.html",
         }
     },
     plugins: [
@@ -20,7 +20,7 @@ const devConfig = {
                 './MarketingApp': './src/bootstrap'
             },
             shared: [packageJson.dependencies]
-            
+
         }),
         new HtmlWebpackPlugin({
             template: './public/index.html'
